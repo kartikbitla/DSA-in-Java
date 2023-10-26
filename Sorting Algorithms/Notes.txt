@@ -1,0 +1,33 @@
+
+*****Types of sorting algorithms*****
+Bubble sort
+Selecetion sort
+Insertion sort
+Bucket sort
+Merge sort
+Quick sort
+Heap sort
+
+
+1. Bubble sort -
+ - Bubble srt is also referred as Sinking sort
+ - We repeatedly compare each pair of adjacent items and swap them if they are in the wrong order
+
+when to use Bubble Sort?
+ - When the input is almost sorted
+ - Space is concern
+ - Easy to implement
+
+When to avoid Bubble Sort?
+ - Average time complexity is poor
+
+
+2. Selection sort-
+ - In case of selection sort we repeatedly find the minimum element and move it to the sorted part of array to make unsorted part sorted. 
+
+When to use Selection sort?
+ - When we have insufficient memory
+ - Easy to implement
+
+When to avoid Selection Sort?
+ - When time is a concern
