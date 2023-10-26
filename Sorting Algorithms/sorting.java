@@ -36,6 +36,15 @@ public class sorting{
     }
 
 
+    //Insertion sort
+    // public void insertionSort(int arr[]){
+    //     int n = arr.length;
+        
+    //     for(int i=0; i<n; i++){
+            
+    //     }
+    // }
+
 
     //Printing array
     public void printArray(int arr[]){

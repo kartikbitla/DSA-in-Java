@@ -9,7 +9,7 @@ Quick sort
 Heap sort
 
 
-1. Bubble sort -
+1. Bubble sort 
  - Bubble srt is also referred as Sinking sort
  - We repeatedly compare each pair of adjacent items and swap them if they are in the wrong order
 
@@ -22,7 +22,9 @@ When to avoid Bubble Sort?
  - Average time complexity is poor
 
 
-2. Selection sort-
+
+
+2. Selection sort
  - In case of selection sort we repeatedly find the minimum element and move it to the sorted part of array to make unsorted part sorted. 
 
 When to use Selection sort?
@@ -30,4 +32,21 @@ When to use Selection sort?
  - Easy to implement
 
 When to avoid Selection Sort?
+ - When time is a concern
+
+
+
+
+
+3. Insertion sort
+ - Divide the given array into two part
+ - Take first element from unsorted array and find its correct position in sorted array
+ - Repeat until unsorted array is empty
+
+When to use Insertion sort?
+ - When we have insufficient memory
+ - Easy to implement
+ - When we have continuous inflow of numbers and we want to keep them sorted
+
+When to avoid Insertion sort?
  - When time is a concern
