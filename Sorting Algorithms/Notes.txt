@@ -50,3 +50,22 @@ When to use Insertion sort?
 
 When to avoid Insertion sort?
  - When time is a concern
+
+
+4. Bucket sort
+ - Create buckets and distribute elements of array into buckets
+ - Sort buckets individually
+ - Merge buckets after sortig
+
+ number of buckets = round(Sqrt(number of elements))
+ round(sqrt(9)) = 3
+ Appropriate bucket = ceil(Value = number of buckets / maxValue)
+ sort all buckets(using any sorting algorithms)
+
+ When to use Bucket Sort?
+  - When input uniformly distributed over range
+    - uniformly distributed - 1,2,4,5,3,8,7,9
+    - uniformly not distributed - 1,2,4,9,10,93,96
+
+ When to avoid Bucket Sort? 
+ - When space is a concern 
