@@ -59,7 +59,8 @@ When to avoid Insertion sort?
 
  number of buckets = round(Sqrt(number of elements))
  round(sqrt(9)) = 3
- Appropriate bucket = ceil(Value = number of buckets / maxValue)
+
+ Appropriate bucket = ceil(Value * number of buckets / maxValue)
  sort all buckets(using any sorting algorithms)
 
  When to use Bucket Sort?

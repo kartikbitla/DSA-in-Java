@@ -40,6 +40,35 @@ public class Bucket_sort {
             }
         }
 
+        ArrayList<Integer>[] buckets = new ArrayList[numberOfBuckets];
+        for(int i=0; i<buckets.length; i++){
+            buckets[i] = new ArrayList<Integer>();
+        }
+
+        for(int value: arr){
+            int bucketNumber = (int) Math.ceil((float)value* numberOfBuckets/(float)maxValue);
+            buckets[bucketNumber-1].add(value);
+        }
         
+
+        
+        System.out.println("\n\nPrinting buckets before sorting...");
+        printBuckets(buckets);
+
+        for(ArrayList<Integer> bucket : buckets){
+            Collections.sort(bucket);
+        }
+
+        System.out.println("\n\nPrinting buckets after sorting...");
+        printBuckets(buckets);
+
+
+        int index = 0;
+        for(ArrayList<Integer> bucket: buckets){
+            for(int value:bucket){
+                arr[index] = value;
+                index++;
+            }
+        }
     }
 }
