@@ -4,6 +4,7 @@ class Main{
         newTrie.insert("Kartik");
         newTrie.insert("Kartiks");
         newTrie.insert("KartikBitla");
+        newTrie.search("Kar");
 
         
     }
