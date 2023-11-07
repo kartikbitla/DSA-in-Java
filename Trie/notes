@@ -28,3 +28,9 @@ Delete a String from Trie.
    Case 2 - The string is a prefix of another string. (API, APIS)
    Case 3 - Other string is a prefix of this string. (API, AP)
    Case 4 - Not any node depends on this string.
+
+
+
+Practical use of trie
+   - Auto Completion
+   - Spelling checker
