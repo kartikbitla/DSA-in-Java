@@ -7,6 +7,8 @@ public class Trie{
     }
 
 
+
+    //insert method
     public void insert(String word){
         TrieNode current = root;
         for(int i=0; i<word.length(); i++){
@@ -24,6 +26,8 @@ public class Trie{
     }
 
 
+
+    //search method
     public boolean search(String word){
         TrieNode currentNode = root;
 
@@ -47,4 +51,55 @@ public class Trie{
         }
         return currentNode.endOfString;
     }
+
+
+    //Delete a String from Trie
+    private boolean delete(TrieNode parentNode, String word, int index){
+        char ch = word.charAt(index);
+        TrieNode currentNode = parentNode.children.get(ch);
+        boolean canThisNodeBeDeleted;
+
+        //case 1 mentioned in notes
+        if(currentNode.children.size() > 1){
+            currentNode.children.remove(ch);
+            return true;
+        }
+
+
+        //case 2 mentioned in notes
+        if(index == word.length()-1){
+            if(currentNode.children.size() >= 1){
+                currentNode.endOfString = false;
+                return false;
+            }else{
+                parentNode.children.remove(ch);
+                return true;
+            }
+        }
+
+        //case 3 mentioned in notes
+        if(currentNode.endOfString == true){
+            delete(currentNode, word, index+1);
+            return false;
+        }
+
+
+        //case 4 mentioned in notes
+        canThisNodeBeDeleted = delete(currentNode, word, index+1);
+        if(canThisNodeBeDeleted == true){
+            parentNode.children.remove(ch);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public void delete(String word){
+        if(search(word)){
+            delete(root, word, 0);
+        }
+    }
+
+
 }

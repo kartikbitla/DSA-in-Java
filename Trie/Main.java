@@ -5,6 +5,8 @@ class Main{
         newTrie.insert("Kartiks");
         newTrie.insert("KartikBitla");
         newTrie.search("Kar");
+        newTrie.delete("Kartik");
+        newTrie.search("Kartik");
 
         
     }

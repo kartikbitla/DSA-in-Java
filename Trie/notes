@@ -7,3 +7,24 @@ What is Trie?
    - Every node stores link of the next character of the string.
    - Every node keeps track of 'end of string'.
 
+
+
+Insert a String in a Trie.
+   Case 1 - A Trie in Blank.
+   Case 2 - New String's prefix is common to another strings prefix.
+   Case 3 - New string's prefix is already present as complete string.
+   Case 4 - String to be inserted is already presented in Trie.
+
+
+
+Search for a String in a Trie.
+   Case 1 - String does not exist in Trie.
+   Case 2 - String exists in Trie.
+   Case 3 - String is a prefix of another string, but it does not exist in a Trie.
+
+
+Delete a String from Trie.
+   Case 1 - Some other prefix of string is same as the one that we want to delete. (API, APPLE)
+   Case 2 - The string is a prefix of another string. (API, APIS)
+   Case 3 - Other string is a prefix of this string. (API, AP)
+   Case 4 - Not any node depends on this string.
