@@ -59,14 +59,15 @@ public class Trie{
         TrieNode currentNode = parentNode.children.get(ch);
         boolean canThisNodeBeDeleted;
 
-        //case 1 mentioned in notes
+        
+        //Case 1 - Some other prefix of string is same as the one that we want to delete. (API, APPLE)   
         if(currentNode.children.size() > 1){
-            currentNode.children.remove(ch);
-            return true;
+            delete(currentNode, word, index+1);
+            return false;
         }
 
 
-        //case 2 mentioned in notes
+        //Case 2 - The string is a prefix of another string. (API, APIS)
         if(index == word.length()-1){
             if(currentNode.children.size() >= 1){
                 currentNode.endOfString = false;
@@ -77,14 +78,16 @@ public class Trie{
             }
         }
 
-        //case 3 mentioned in notes
+  
+        // Case 3 - Other string is a prefix of this string. (API, AP)   
         if(currentNode.endOfString == true){
             delete(currentNode, word, index+1);
             return false;
         }
 
 
-        //case 4 mentioned in notes
+
+        //Case 4 - Not any node depends on this string.
         canThisNodeBeDeleted = delete(currentNode, word, index+1);
         if(canThisNodeBeDeleted == true){
             parentNode.children.remove(ch);
