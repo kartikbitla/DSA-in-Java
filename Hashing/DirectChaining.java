@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class DirectChaining {
     LinkedList<String>[] hashTable;  // An array of LinkedLists to implement direct chaining
@@ -44,7 +45,7 @@ public class DirectChaining {
         } else {
             System.out.println("--------Hash Table----------");
             for (int i = 0; i < hashTable.length; i++) {
-                System.out.println("Index " + i + ", keys: " + hashTable[i]);
+                System.out.println("Index " + i + "- keys: " + hashTable[i]);
             }
         }
     }
