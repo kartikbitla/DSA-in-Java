@@ -3,8 +3,7 @@ Hashing
     The idea behind hashng is to allow large amounts of data to be indexed using  keys commmonly created by formulas.
 
     Explaination:-
-        Whatever string we provide to this DS will gone through a function, which will convert the string into an Unique
-        number, based on that given number string will be assigned to an Array.
+        Whatever string we provide to this DS will gone through a function, which will convert the string into an Unique number, based on that given number string will be assigned to an Array.
 
 
 Why Hashing ?
@@ -65,3 +64,15 @@ Collision Resolution Techniques
     
     Direct Chaining - Implements the buckets as linked list. Colliding elements are stored in this lists.
                       Suppose we have an array of 15, and have 3 string ABCD, EFGH and IJKLM, three of them are giving the same hash code i.e 2. So what we will do it, at the index of 2 of Array we will give the address of linked list node where ABCD is saved, and address of EFGH will be given to first node, and so on.
+
+
+
+
+Hash Table is Full
+    - Direct Chaining
+        - This situation will never arise. 
+            Since we will be using linked list, so no matter how many nodes you add it will be added in the linked list. It's just the searching method will be taking long to find an element, as the time complexity will be o(n).
+
+    Open Addressing
+        - Create 2X size of current Hash Table and recall hashing for current keys.      
+            Suppose we have hash table size of 10 and every block has been filled with the key given by user, That time hash table will be double of his size, in our case it will be size of 20.

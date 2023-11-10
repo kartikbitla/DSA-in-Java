@@ -6,7 +6,9 @@ class Main{
         newDirectChain.insertHashTable("brown");
         newDirectChain.insertHashTable("fox");
         newDirectChain.insertHashTable("over");
-        //newDirectChain.displayHashTable();
+        newDirectChain.displayHashTable();
+        newDirectChain.searchHashTable("over");
+        newDirectChain.searchHashTable("ver");
         newDirectChain.deleteKeyHashTable("over");
         newDirectChain.displayHashTable();
         

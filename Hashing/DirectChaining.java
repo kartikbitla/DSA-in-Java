@@ -52,6 +52,7 @@ public class DirectChaining {
 
 
 
+    //search en element in the Hash Table and return index and boolean value
     public boolean searchHashTable(String word){
         int index = modeASCIIFunction(word, hashTable.length);
         if(hashTable[index] != null && hashTable[index].contains(word)){
