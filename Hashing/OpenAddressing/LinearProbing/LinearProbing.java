@@ -103,6 +103,7 @@ public class LinearProbing{
         return false;
     }
 
+
     public void deleteKeyHashTable(String word){
         int index = modASCIIHashFunction(word, hashTable.length);
         for(int i=index; i<index+hashTable.length; i++){
