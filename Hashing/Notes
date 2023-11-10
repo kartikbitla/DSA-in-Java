@@ -66,6 +66,10 @@ Collision Resolution Techniques
                       Suppose we have an array of 15, and have 3 string ABCD, EFGH and IJKLM, three of them are giving the same hash code i.e 2. So what we will do it, at the index of 2 of Array we will give the address of linked list node where ABCD is saved, and address of EFGH will be given to first node, and so on.
 
 
+    Open Addressing - Colliding elements are stored in other vacant buckets. During storage and lookup these are found through so called probing. 
+
+               - Linear Probing - It places new key into closest following empty cell.
+
 
 
 Hash Table is Full
