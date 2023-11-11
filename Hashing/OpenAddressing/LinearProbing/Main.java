@@ -17,5 +17,6 @@ class Main{
         linearProbing.displayHashTable();
         linearProbing.searchInHashTable("brown");
         linearProbing.searchInHashTable("hello");  
+        linearProbing.displayHashTable();
     }
 }
