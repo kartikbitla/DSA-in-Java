@@ -70,7 +70,7 @@ Collision Resolution Techniques
 
                - Linear Probing - It places new key into closest following empty cell.
                - Qadratic probing - Adding arbitrary quadratic polynomial to the index until an empty cell is found.
-
+               - Double Hashing - Interval between probes is computed by another hash function.
 
 
 Hash Table is Full
