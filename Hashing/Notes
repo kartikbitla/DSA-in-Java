@@ -69,6 +69,7 @@ Collision Resolution Techniques
     Open Addressing - Colliding elements are stored in other vacant buckets. During storage and lookup these are found through so called probing. 
 
                - Linear Probing - It places new key into closest following empty cell.
+               - Qadratic probing - Adding arbitrary quadratic polynomial to the index until an empty cell is found.
 
 
 
