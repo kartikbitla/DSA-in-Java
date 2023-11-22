@@ -8,5 +8,5 @@ class Main{
         doubleHashing.insertKeyInHashTable("over");
         doubleHashing.insertKeyInHashTable("lazy");
         doubleHashing.displayHashTable();
-    }
+        doubleHashing.searchInHashTable("Lazy");
 }
