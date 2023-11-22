@@ -81,3 +81,24 @@ Hash Table is Full
     Open Addressing
         - Create 2X size of current Hash Table and recall hashing for current keys.      
             Suppose we have hash table size of 10 and every block has been filled with the key given by user, That time hash table will be double of his size, in our case it will be size of 20.
+
+
+Pros and Cons of Collision resolution techniques
+
+    Direct chaining
+        - Hash table never gets full.
+        - Huge Linked List causes performance leaks (Time complexity for search operation becomes O(n).).
+
+    Open addressing
+        - Easy Implementation.
+        - When Hash Table is full, creation of new Hash table affects performace (Time complexity for search operation becomes O(n).). 
+
+    If the input size is know we always use "Open addressing".
+    If we perform deletion operation frequently we use "Direct Chaining".
+
+
+Practical use of Hashing
+    Password verification - So whenever we enter our password in any website, all it does is it takes our password and converts it to hash value and stores it on servers. So the next time when we want to login our account, the password that we have entered gets converted to a hash value using a hash function. Then the server checks. If this value exists in this database or not, if it exists there, it allows us to enter our account.
+
+
+    File system - File path is mapped to physical location on disk.
