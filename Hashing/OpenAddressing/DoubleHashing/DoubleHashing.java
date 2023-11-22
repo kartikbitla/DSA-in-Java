@@ -27,7 +27,7 @@ public class DoubleHashing{
     
     //Rehash keys
     public void rehashKeys(String word){
-        usedCellNumber = 0;
+        noOfCellsUsedInHashTable = 0;
         ArrayList<String> data = new ArrayList<String>();
 
         //First moving all data in temp arraylist i.e data 
@@ -76,7 +76,41 @@ public class DoubleHashing{
         ch = x.toCharArray();
         int i,sum;
 
-        
+        for(sum=0, i=0; i<x.length(); i++){
+            sum+=ch[i];
+        }
+        while(sum>hashTable.length){
+            sum = addAllDigitsTogether(sum);
+        }
+
+        return sum%M;        
+    }
+
+    
+    public double getLoadFactor(){
+        return noOfCellsUsedInHashTable * 1.0/hashTable.length;
+    }
+
+    public void insertKeyInHashTable(String value){
+        double loadFactor = getLoadFactor();
+        if(loadFactor >= 0.75){
+            rehashKeys(value);
+        }else{
+            int x = modASCIIHashFunction(value, hashTable.length);
+            int y = secondHashFunction(value, hashTable.length);
+
+            for(int i=0; i<hashTable.length; i++){
+                int newIndex = (x + i*y) % hashTable.length;
+                if(hashTable[newIndex] == null){
+                    hashTable[newIndex] = value;
+                    System.out.println(value + " inserted at location " + newIndex);
+                    break;
+                }else{
+                    System.out.println(newIndex + " is occupied. Trying next empty index...");
+                }
+            }
+        }
+        noOfCellsUsedInHashTable++;
     }
 
 }
