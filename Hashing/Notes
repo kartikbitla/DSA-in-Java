@@ -104,3 +104,10 @@ Practical use of Hashing
     File system - File path is mapped to physical location on disk.
 
 
+
+Pros and Cons of Hashing
+    Pros - 
+        On an average Insertion/Deletion/Search operations take O(1) time.
+
+    Cons-
+        When hash function is not good enough Insertion/Deletion/Search operations take O(n) time.
