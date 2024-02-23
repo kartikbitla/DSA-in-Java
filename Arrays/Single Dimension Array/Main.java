@@ -5,8 +5,6 @@ class Main{
         sda.insert(0,0);
         sda.insert(1,10);
         sda.insert(2,20);
-                
-
         
         //sda.searchInArray(20);
         sda.deleteValue(1);
