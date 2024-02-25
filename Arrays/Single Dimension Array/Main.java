@@ -6,6 +6,7 @@ class Main{
         sda.insert(1,10);
         sda.insert(2,20);
         
+        
         //sda.searchInArray(20);
         sda.deleteValue(1);
         System.out.println(Arrays.toString(sda.arr));
