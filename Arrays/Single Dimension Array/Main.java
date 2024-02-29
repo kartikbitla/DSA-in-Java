@@ -8,6 +8,5 @@ class Main{
         //sda.searchInArray(20);
         sda.deleteValue(1);
         System.out.println(Arrays.toString(sda.arr));
-
     }
 } 
