@@ -10,7 +10,6 @@ class Main{
         newDirectChain.searchHashTable("over");
         newDirectChain.searchHashTable("ver");
         newDirectChain.deleteKeyHashTable("over");
-        newDirectChain.displayHashTable();
-        
+        newDirectChain.displayHashTable();        
     }
 }
