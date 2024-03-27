@@ -1,7 +1,6 @@
 import java.util.Arrays;
 class Main{
-    public static void main(String[] agrs){
-        
+    public static void main(String[] agrs){        
         SingleDimensionArray sda = new SingleDimensionArray(10);
         sda.insert(0,0);
         sda.insert(1,10);
